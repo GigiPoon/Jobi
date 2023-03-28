@@ -1,0 +1,17 @@
+// Setup Snippet
+@import "./partials/setup";
+
+// Base Styles
+@import "./partials/variables";
+@import "./partials/typography";
+@import "./partials/baseStyles";
+
+// navigation
+@import "./partials/navbar";
+
+
+//media queries
+@import "./partials/mediaQueries";
+
+//home queries
+@import "./partials/home";

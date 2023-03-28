@@ -1,0 +1,60 @@
+//general styles
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+img {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: $black;
+}
+
+p {
+	color: $black;
+}
+
+button {
+	color: $black;
+	background-color: #fff;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+	}
+	&:focus {
+	}
+}
+
+.App {
+	min-height: 100vh;
+}
+
+.flex {
+	display: flex;
+}
