@@ -8,7 +8,6 @@ import Jobiguides from "./Jobiguides";
 import jobsData from "../Data/JobsData";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
-import Jobs from "./Job";
 
 function Home() {
 
@@ -21,8 +20,8 @@ function Home() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setCustomInput("");
         console.log(customInput)
+        setCustomInput("");
     };
 
     return (
@@ -36,19 +35,16 @@ function Home() {
                         <div className="homestlye">
                             <p>Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
                             <form 
-                            onSubmit={(event) => {
-                                handleSubmit(event);
-                            }}
-                            className="homeforum">
+                                className="homeforum"
+                                onSubmit={(event) => {handleSubmit(event);}}>
                                 <div className="homeleft">
                                 <label htmlFor="" className="">Job Categories</label>
                                     <select name="jobChange" id="jobChange" onChange={handleChange}>
                                         {jobsData.map((title, index) => {
-                                            return (
-                                                <option
-                                                key={index}
-                                                    value={title.title}>{title.title}</option>
-                                                
+                                        return (
+                                            <option
+                                            key={index}
+                                            value={title.title}>{title.title}</option>
                                             )
                                         })}
                                     </select>
@@ -60,6 +56,7 @@ function Home() {
                                     <input
                                         name="search"
                                         type="text"
+                                        value={customInput}
                                     />
                                 </div>
                             <button type="submit">Search</button>

@@ -8,6 +8,7 @@ import { initializeApp } from "firebase/app";
 const firebaseConfig = {
     apiKey: "AIzaSyDYnJUzyvfR_bbw2Eb3_TlSsHuEpqot7-A",
     authDomain: "jobi-594b9.firebaseapp.com",
+    databaseURL: "https://jobi-594b9-default-rtdb.firebaseio.com",
     projectId: "jobi-594b9",
     storageBucket: "jobi-594b9.appspot.com",
     messagingSenderId: "121516574529",
