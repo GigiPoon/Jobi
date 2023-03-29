@@ -1,9 +1,30 @@
-.navBar {
-    display:flex;
-    justify-content: center;
+nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 50px;
-    li a{
-        padding: 20px;
+    .navBar {
+        display: flex;
+        padding: 10px;
+        margin-left: 170px;
+        li {
+            padding: 10px;
+        }
     }
+}
+
+.shiftnavright {
+    display: flex;
+    justify-content: flex-end;
+    button:first-child {
+        border: 1px solid $black;
+        color: $black;
+        background-color: white;
+    }
+    button:last-child {
+        margin-left: 10px;
+    }
+    
 }

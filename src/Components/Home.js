@@ -5,9 +5,25 @@ import Worldoftalents from "./Worldoftalents";
 import QA from "./QA";
 import Leadingstartup from "./Leadingstartup";
 import Jobiguides from "./Jobiguides";
+import jobsData from "../Data/JobsData";
+import Footer from "./Footer";
+import { useEffect, useState } from "react";
+import Jobs from "./Job";
 
 function Home() {
 
+    const [job, jobChange] = useState("");
+    const [customInput, setCustomInput] = useState("");
+
+    const handleChange = (event) => {
+        jobChange(event.target.value);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setCustomInput("");
+        console.log(customInput)
+    };
 
     return (
         <div className="Home">
@@ -19,25 +35,36 @@ function Home() {
                         </h1>
                         <div className="homestlye">
                             <p>Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
-                            <form className="homeforum">
+                            <form 
+                            onSubmit={(event) => {
+                                handleSubmit(event);
+                            }}
+                            className="homeforum">
                                 <div className="homeleft">
-                                    <label htmlFor="" className="">Job Categories</label>
-                                    <select>
-                                        <option value="">Designer</option>
+                                <label htmlFor="" className="">Job Categories</label>
+                                    <select name="jobChange" id="jobChange" onChange={handleChange}>
+                                        {jobsData.map((title, index) => {
+                                            return (
+                                                <option
+                                                key={index}
+                                                    value={title.title}>{title.title}</option>
+                                                
+                                            )
+                                        })}
                                     </select>
                                 </div>
                                 <div className="homeright">
-                                    <label htmlFor="" className="">
+                                <label for="search" className="search">
                                     Keywords or Title
                                     </label>
                                     <input
-                                        type="search"
-                                        id="search">
-                                    </input>
+                                        name="search"
+                                        type="text"
+                                    />
                                 </div>
                             <button type="submit">Search</button>
                             </form>
-                            <p><span className="bold">Populer:</span>  Design, Art, Business, Video Editing</p>
+                            <p><span className="bold">Populer:</span> Design, Art, Business, Video Editing</p>
                         </div>
                     </div>
                 </div>
@@ -65,6 +92,7 @@ function Home() {
             <Leadingstartup />
             <QA />
             <Jobiguides />
+            <Footer />
         </div>
     );
 }

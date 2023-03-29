@@ -12,6 +12,12 @@
     p {
         padding: 25px 0;
     }
+    p:last-child {
+        color: grey;
+    }
+    p:last-child .bold {
+        color: black;
+    }
 }
 
 .homeforum {
@@ -22,18 +28,42 @@
     align-items: center;
     border-radius: 10px;
     width: 70%;
+    padding: 20px;
     margin: 0 auto;
 }
 
 .homeleft,
-.homeright, .homeforum button {
-    width: calc(100%/3 - 45px);
+.homeright {
+    width: calc(40%);
     display: flex;
     flex-direction: column;
-    margin: 15px 25px;
+    text-align: left;
+    label {
+    font-size: 16px;
+    opacity: 70%;
+    color: grey;
+    }
+    input, select {
+        border:none;
+        background-color: white;
+    }
 }
 
+.homeleft {
+    border-right: 1px solid $grey;
+    padding-right: 25px;
+}
 
+.homeright {
+    padding: 0 25px;
+}
+
+.homeforum button {
+    width: 20%;
+    border-radius: 5px;
+    padding: 15px 35px;
+    
+}
 
 .logonav {
     padding: 70px 0 81px 0;
@@ -56,7 +86,7 @@
     align-items: flex-end;
     a {
         margin-left: auto;
-        text-decoration: underline;
+        border-bottom: 2px solid $brightgreen;
         color: $brightgreen;
         :visited {
             color: $brightgreen;
@@ -93,13 +123,18 @@
         margin-bottom: 20px;
         h4:nth-child(odd) {
             color: white;
-        }
+            font-family: 'EB Garamond', serif;  
+            font-size: 85px;
+            line-height: 1.2px; 
+            padding: 10px 0; 
+            }
         p:nth-child(odd)  {
             font-size: 16px;
             color: #737373;
         }
         p:nth-child(even) {
             color: white;
+            padding: 30px 0;
         }
     }
     li:last-child {
@@ -118,6 +153,20 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.fleximg {
+    margin: 30px 0;
+    display: flex;
+    :first-child {
+        width: 62px;
+        height: 32px;
+        margin: 30px;
+    }
+    :nth-child(2) {
+        width: 92px;
+        height: 92px;
+    }
 }
 
 .Howsitwork h2 {
@@ -158,25 +207,70 @@
     padding: 149px 0 81px 0;
     img {
         width: 50%;
+        height: 50%;
     }
 }
 
 .flextalent {
-    p:first-child {
+    width: 50%;
+    p {
         color: $brightgreen;
         font-family: "Gordita Medium";
         font-weight: 500;
         font-size: 18px;
         line-height: 35px;
     }
-    p:nth-child(n+2) {
-        font-size: 18px;
-        line-height: 32px;
-        opacity: 70%;
+    .h3dup {
+        color: $green;
     }
-    h3 {
-        color: $darkgreen;
-    }
+        .accordion {
+            box-shadow: none;
+            border-bottom: 1px solid $grey;
+            padding: 10px 0;
+            border-radius: 0px;
+            background-color: white;
+        }
+    
+        .accordion::before {
+            background-color: rgba(0, 0, 0, 0);
+        }
+    
+        // .MuiAccordion-root {
+        //     box-shadow: none;
+        //     border-radius: 0px;
+        //     background-color: none;
+        // }
+        .css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+            border-radius: 0px;
+        }
+    
+        .accordionlorem {
+            font-family: 'Gordita Regular';
+            opacity: 70%;
+            font-size: 18px;
+            line-height: 32px;
+            opacity: 70%;
+            color: $black;
+            padding: 0;
+        }
+    
+        .h3dup {
+            font-size: 24px;
+            font-family: 'Gordita Medium';
+            font-weight: 500;
+            line-height: 34.2px;
+            width: 100%;
+            padding: 0;
+        }
+        .paddingfix {
+            padding: 0;
+        }
+        .paddbottom {
+            padding-bottom: 20px;
+        }
+        button {
+            margin: 50px 0 15px 0;
+        }
 }
 
 .flextopcompany {
@@ -208,6 +302,13 @@
             opacity: 70%;
             text-align: center;
             margin: 20px 0;
+        }
+        button {
+            border: 1px solid $brightgreen;
+            color: $brightgreen;
+            background-color: white;
+            font-size: 18px;
+            padding: 1px 20px;
         }
     }
 }
@@ -256,15 +357,11 @@
 
 .QA {
     text-align: center;
-    h3, p {
+    p:first-child{
         text-align: left;
+        width: 100%;
     }
-    p {
-        font-size: 18px;
-        opacity: 70%;
-        line-height: 33px;
-    }
-    p:last-child {
+    .qastylep {
         background-color: $lightgreen;
         display: inline-block;
         border-radius: 30px;
@@ -272,14 +369,45 @@
         font-family: 'Gordita Medium';
         font-size: 16px;
         padding: 6px 20px;
-        margin: 0 auto;
         opacity: 100%;
         margin-top: 60px;
+        text-align: center;
     }
     p a {
         color: $brightgreen;
         text-decoration: underline;
         padding: 5px;
+    }
+    .accordion {
+        box-shadow: none;
+        border-bottom: 1px solid $grey;
+        padding: 10px;
+        border-radius: 0px;
+        background-color: white;
+        margin: 0 35px;
+    }
+    .accordion::before {
+    background-color: rgba(0, 0, 0, 0);
+    }
+    // .MuiAccordion-root {
+    //     box-shadow: none;
+    //     border-radius: 0px;
+    //     background-color: none;
+    // }
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+        border-radius: 0px;
+    }
+    .accordionlorem {
+        font-size: 18px;
+        font-family: 'Gordita Regular';
+        line-height: 33px;
+        opacity: 70%;
+    }
+    .h3dup {
+        font-size: 24px;
+        font-family: 'Gordita Medium';
+        font-weight: 500;
+        line-height: 34.2px;
     }
 }
 
@@ -292,7 +420,7 @@
     justify-content: space-between;
     align-items: center;
     li {
-        width: calc(100%/2 - 20px);
+        width: 45%;
         p:nth-child(2) {
             font-size: 16px;
             color: #AAAAAA;
@@ -314,5 +442,60 @@
             font-size: 18px;
             letter-spacing: -1px;
         }
+        img {
+            width: 100%;
+        }
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    li a {
+        font-size: 17px;
+        line-height: 44px;
+        opacity: 70%;
+    }
+    li h3 {
+        padding-bottom: 15px;
+    }
+}
+
+.rightfooter {
+    h3 {
+        padding-bottom: 15px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 38px;
+        padding-bottom: 20px;
+    }
+    form {
+        border: 1px solid $black;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between; 
+    }
+    label, input {
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    button {
+        border-radius: 6px;
+    }
+    p:last-child {
+        font-size: 14px;
+        line-height: 26px;
+        color: #979797;
+    }
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    opacity: 70%;
+    padding: 100px 0 50px 0;
 }

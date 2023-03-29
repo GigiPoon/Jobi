@@ -40,11 +40,14 @@ p {
 }
 
 button {
-	color: $black;
-	background-color: #fff;
+	color: white;
+	background-color: $brightgreen;
 	text-align: center;
 	cursor: pointer;
 	transition: 0.3s;
+	border:none;
+	border-radius: 50px;
+	padding: 7px 25px;
 	&:hover {
 	}
 	&:focus {

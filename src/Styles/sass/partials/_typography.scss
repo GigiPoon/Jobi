@@ -14,6 +14,7 @@
 		url("../font/GorditaLight.otf") format("truetype");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 body {
 	// font-size: 125%;
@@ -43,7 +44,7 @@ h2 {
 	line-height: 72px;
 }
 
-h3 {
+h3, .h3dup {
 	font-size: 24px;
 	line-height: 45px;
 }
@@ -61,4 +62,10 @@ h5 {
 
 .bold {
 	font-weight: bold;
+}
+
+button,
+nav li a {
+	font-size: 18px;
+	line-height: 30px;
 }

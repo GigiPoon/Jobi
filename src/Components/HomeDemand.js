@@ -47,8 +47,10 @@ function HomeDemand() {
                     <li>
                         <h4>13k+</h4>
                         <p>Job already posted</p>
-                        <img src={require('../Assets/lines.png')} />
-                        <img src={require('../Assets/arrowWhite.png')} />
+                        <div className='fleximg'>
+                            <img src={require('../Assets/lines.png')} />
+                            <img src={require('../Assets/arrowWhite.png')} />
+                        </div>
                     </li>
                 </ul>
             </div>
