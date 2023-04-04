@@ -27,20 +27,24 @@ function Jobs() {
         setUserInput(event.target.value)
     }
 
+    console.log(jobs.filter(job=>job.toLowerCase().includes("fe")))
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        saveItemToDatabase(userInput)
+        // saveItemToDatabase(jobsData)
+        console.log(event, 'event')
         setUserInput('');
     }
 
-    const saveItemToDatabase = (item) => {
-        const database = getDatabase(firebase)
-        const dbRef = ref(database)
-        const newObject = {
-            title: item
-            }
-        push(dbRef, newObject)
-    }
+    // const saveItemToDatabase = (item) => {
+    //     const database = getDatabase(firebase)
+    //     const dbRef = ref(database)
+    //     const newObject = {
+    //         title: item
+    //         }
+    //         console.log(newObject, 'newobject')
+    //     push(dbRef, newObject)
+    // }
 
 
     return (
@@ -78,17 +82,23 @@ function Jobs() {
                     </div>
                     <button type="submit">Search</button>
                 </form>
-                <div>
-                    {
-                        jobs.map((job)=> {
+                <ul>
+                        {
+                        jobs.filter((job) => job.toLowerCase().includes(userInput)).map((job) => {
+
+
                             return (
-                                <div>
-                                    {job.title}
-                                </div>
+                                <li>
+                                    <p>Title: {job}</p>
+                                    {/* <p>Date: {job.date}</p> 
+                                    <p>Required Skills: {job.requiredSkills}</p>
+                                    <p>Description: {job.description}</p>
+                                    <p>Salary: Max {job.salary.max} Min {job.salary.min}</p>  */}
+                                </li>
                             )
                         })
                     }
-                </div>
+                </ul>
             </div>
         </div>
     );
