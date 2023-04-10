@@ -8,6 +8,7 @@ import Jobiguides from "./Jobiguides";
 import jobsData from "../Data/JobsData";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
 
@@ -56,10 +57,9 @@ function Home() {
                                     <input
                                         name="search"
                                         type="text"
-                                        value={customInput}
                                     />
                                 </div>
-                            <button type="submit">Search</button>
+                            <Link to="job"><button type="submit">Search</button></Link>
                             </form>
                             <p><span className="bold">Populer:</span> Design, Art, Business, Video Editing</p>
                         </div>

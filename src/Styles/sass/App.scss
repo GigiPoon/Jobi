@@ -9,9 +9,13 @@
 // navigation
 @import "./partials/navbar";
 
+//home queries
+@import "./partials/job";
+@import "./partials/home";
+@import "./partials/errorPage";
+
+//joblist queries
+@import "./partials/jobList";
 
 //media queries
 @import "./partials/mediaQueries";
-
-//home queries
-@import "./partials/home";

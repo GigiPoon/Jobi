@@ -49,8 +49,10 @@ button {
 	border-radius: 50px;
 	padding: 7px 25px;
 	&:hover {
+		border: 1px solid black;
 	}
 	&:focus {
+		border: 1px solid black;
 	}
 }
 

@@ -1,0 +1,62 @@
+.bottomjoblist {
+    padding: 100px 0; 
+    display: flex; 
+    align-items: flex-start;
+}
+
+.filter {
+    background-color: $lightgreen;
+    padding: 30px;
+    border-radius: 20px;
+    margin-right: 60px;
+    width: 25%;
+}
+
+.jobBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        padding: 30px;
+        border: 1px solid $grey;
+        width: 420px;
+        height: 340px;
+        .logoimgbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p:nth-child(2){
+            font-size: 0.813rem;
+        }
+        p:nth-child(3) {
+            font-size: 1.5rem;
+        }
+        p:nth-child(4) {
+            font-size: 0.938rem;
+        }
+        button {
+            color: white;
+            background-color: $green;
+            font-size: 0.75rem;
+            border-radius: 17px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0 10px;
+            
+        }
+    }
+}
+
+.locationbutton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        font-size: 1rem;
+    }
+}
+

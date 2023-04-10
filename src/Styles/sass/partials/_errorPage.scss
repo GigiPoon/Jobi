@@ -1,0 +1,22 @@
+.flexboxleft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.flexboxright {
+    margin: 0 0 0 40px;
+    h6 span {
+            color: $green;
+        }
+    p {
+        margin: 30px 0 30px 0;
+    }
+    button {
+        width: 100%;
+        text-align: left;
+        color: $black;
+        background-color: #D2F34C;
+    }
+}

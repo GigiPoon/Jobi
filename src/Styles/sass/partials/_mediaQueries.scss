@@ -1,8 +1,349 @@
-@media (max-width: 950px) {
+@media (max-width: 1350px) {
+    .jobBoxes {
+        li {
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .jobDetailLeft {
+        width: 60%;
+    }
+
+    .jobDetailRight {
+        width: 30%;
+    }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 950px) {
+    .hamburger,
+    .togglemenu {
+        display: block;
+    }
+    nav {
+        padding: 20px 0;
+        .navBar {
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            background: $black;
+            width: 300px;
+            height: 100vh;
+            padding-top: 65px;
+            li {
+                &::after {
+                        background: white;
+                    }
+                }
+                
+                a {
+                    &:hover {
+                        color: white;
+                    }
+                
+                    &:focus {
+                        color: white;
+                        border: 1px solid white;
+                    }
+            }
+            li a {
+                color: white;
+            }
+        }
+    }
+    body, p{
+    font-size: 100%;
+    // color: red;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.25rem;
+        line-height: 3rem
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4, h5 {
+        font-size: 1.5rem;
+    }
+    button,
+    nav li a {
+        font-size: 1rem;
+    }
+    .homeforum {
+        width: 100%;
+    }
+    .logonav {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .demandArray {
+        li {
+            width: calc(50% - 20px);
+        }
+    }
+    .flexcompanycolors {
+        flex-wrap: wrap;
+        img {
+            width: 65px;
+            height: 65px;
+        }
+        li {
+            width: calc(52% - 35px);
+            margin-bottom: 35px;
+        }
+    }
+    .flexcard {
+        .card {
+            p:nth-child(3) {
+                font-size: 0.9rem;
+            }
+            p:nth-child(2) {
+                padding: 20px 0 0 0;
+                font-size: 1.5rem;
+                line-height: 45px;
+            }
+        }
+    }
+    .flexjobicards {
+        li {
+            p:nth-child(2) {
+                font-size: 0.9rem;
+            }
+
+            span {
+                font-size: 0.9rem;
+            }
+
+            p:nth-child(3) {
+                font-size: 1.5rem;
+                line-height: 36px;
+            }
+
+            p:nth-child(4) {
+                font-size: 0.9rem;
+                letter-spacing: -1px;
+            }
+        }
+    }
+    .footer {
+        flex-wrap: wrap;
+
+        li a {
+            font-size: 0.9rem;
+            line-height: 44px;
+            opacity: 70%;
+        }
+
+        li h3 {
+            padding-bottom: 5px;
+        }
+    }
+    .rightfooter {
+        padding: 40px 0;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    .filter {
+        width: 100%;
+    }
+    .jobDetailBottom {
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+        .jobDetailLeft {
+            width: 100%;
+        }
+
+        .jobDetailRight {
+            width: 40%;
+            margin: 0 auto; 
+            margin-bottom: 50px;
+        }
+        .flexboxleft {
+            img {
+                display: none;
+            }
+        }
+}
+
+@media (max-width: 750px) {
+
+    .homeforum {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .homeleft,
+    .homeright {
+        width: 80%;
+        text-align: left;
+
+        label {
+            font-size: 0.9rem;
+        }
+        input,
+        select {
+            border: 1px solid rgb(222, 222, 222);
+            margin: 10px 0;
+        }
+    }
+    .homeleft {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .homeright {
+        padding: 0;
+    }
+
+    .homeforum button {
+        width: 100%;
+        margin: 10px 0 0 0;
+        border-radius: 5px;
+        padding: 2px 12px;
+
+    }
+    .flexcard {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .card {
+            width: 90%;
+            margin-bottom: 30px;
+
+            p:nth-child(3) {
+                font-size: 0.9rem;
+            }
+
+            p:nth-child(2) {
+                font-size: 1.9rem;
+                line-height: 45px;
+            }
+        }
+    }
+    .bottomjoblist {
+        flex-direction: column;
+    }
+    .filter {
+        margin-bottom: 30px;
+    }
+    .jobDetailRight {
+        width: 70%;
+    }
+}
+
+@media (max-width: 650px) {
+    .logonav {
+            flex-direction: column;
+            padding: 0 0 81px 0;
+            justify-content: space-between;
+            li {
+                margin: 10px 0;
+            }
+        }
+    .demandArray {
+        justify-content: center;
+        align-items: center;
+        li {
+            width: 70%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .howsitwork {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Worldoftalents {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 70%;
+            height: 70%;
+            margin: 0 0 50px 0;
+        }
+    }
+    .flextalent {
+        width: 80%;
+        
+        .accordionlorem {
+            font-size: 1rem;
+            line-height: 30px;
+        }
+        .h3dup {
+            font-size: 1.3rem;
+            line-height: 34px;
+        }
+    }
 }
 
 @media (max-width: 440px) {
+    nav {
+        padding-bottom: 0;
+        }
+    h1 {
+        font-size: 2.7rem;
+    }
+    .demandArray {
+        li {
+            width: 100%;
+        }
+    }
+    .flexcompanycolors {
+        li {
+            width: 100%;
+        }
+    }
+    .flexcard {
+        .card {
+            width: 100%;
+            p:nth-child(3) {
+                    font-size: 0.9rem;
+                }
+            
+                p:nth-child(2) {
+                    font-size: 1.4rem;
+                    line-height: 35px;
+                }
+        }
+    }
+    .QA {
+        .qastylep {
+            font-size: 1rem;
+        }
+        .accordion {
+            padding: 0;
+        }
+        .accordionlorem {
+            font-size: 1rem;
+        }
+        .h3dup {
+            font-size: 1.35rem;
+            line-height: 32px;
+        }
+    }
+    .jobBoxes {
+        li {
+            height: 250px;
+        }
+    }
+    .jobDetailRight {
+        width: 100%;
+    }
 }
